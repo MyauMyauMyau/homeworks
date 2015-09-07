@@ -1,0 +1,6 @@
+C:\Users\Meow\Desktop\git\homeworks\1\AccountCalculator\AccountCalculator\bin\Debug\AccountCalculator.exe.config
+C:\Users\Meow\Desktop\git\homeworks\1\AccountCalculator\AccountCalculator\bin\Debug\AccountCalculator.exe
+C:\Users\Meow\Desktop\git\homeworks\1\AccountCalculator\AccountCalculator\bin\Debug\AccountCalculator.pdb
+C:\Users\Meow\Desktop\git\homeworks\1\AccountCalculator\AccountCalculator\obj\Debug\AccountCalculator.csprojResolveAssemblyReference.cache
+C:\Users\Meow\Desktop\git\homeworks\1\AccountCalculator\AccountCalculator\obj\Debug\AccountCalculator.exe
+C:\Users\Meow\Desktop\git\homeworks\1\AccountCalculator\AccountCalculator\obj\Debug\AccountCalculator.pdb
