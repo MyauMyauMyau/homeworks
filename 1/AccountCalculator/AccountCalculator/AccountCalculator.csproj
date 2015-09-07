@@ -7,8 +7,8 @@
     <ProjectGuid>{C628D5B9-D1A2-4E47-BF37-6A9634C94455}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BankHelper</RootNamespace>
-    <AssemblyName>BankHelper</AssemblyName>
+    <RootNamespace>AccountCalculator</RootNamespace>
+    <AssemblyName>AccountCalculator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
