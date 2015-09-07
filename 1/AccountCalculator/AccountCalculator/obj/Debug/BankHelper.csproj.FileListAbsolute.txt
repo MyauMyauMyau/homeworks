@@ -1,0 +1,6 @@
+c:\users\meow\documents\visual studio 2015\Projects\BankHelper\BankHelper\bin\Debug\BankHelper.exe.config
+c:\users\meow\documents\visual studio 2015\Projects\BankHelper\BankHelper\obj\Debug\BankHelper.csprojResolveAssemblyReference.cache
+c:\users\meow\documents\visual studio 2015\Projects\BankHelper\BankHelper\bin\Debug\BankHelper.exe
+c:\users\meow\documents\visual studio 2015\Projects\BankHelper\BankHelper\bin\Debug\BankHelper.pdb
+c:\users\meow\documents\visual studio 2015\Projects\BankHelper\BankHelper\obj\Debug\BankHelper.exe
+c:\users\meow\documents\visual studio 2015\Projects\BankHelper\BankHelper\obj\Debug\BankHelper.pdb

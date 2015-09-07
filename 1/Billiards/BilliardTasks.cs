@@ -7,17 +7,17 @@ namespace Billiards
 
 		public double BounceHorizontalWall(double directionRadians)
 		{
-			return (-1*directionRadians);
+            return BounceWall(directionRadians, 0);
         }
-
-		public double BounceWall(double directionRadians, double wallInclanationRadians)
-		{
-            //coordinates shift
-            return BounceHorizontalWall(directionRadians- wallInclanationRadians) + wallInclanationRadians;
-		}
         public double BounceVerticalWall(double directionRadians)
         {
             return BounceWall(directionRadians, Math.PI / 2);
         }
+        public double BounceWall(double directionRadians, double wallInclanationRadians)
+		{
+            //coordinates shift
+            return 2*wallInclanationRadians - directionRadians;
+		}
+
     }
 }
