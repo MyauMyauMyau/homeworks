@@ -22,9 +22,9 @@ namespace AccountCalculator
         {
             if (amount < 0 || annualInterest < 0 || months < 0)
                 throw new ArgumentException();
-            //return amount*Math.Pow(((100 + annualInterest/monthsInYear)/100), months);
-            return Enumerable.Range(1, months)
-                .Aggregate(amount, (x, y) => x * (100 + annualInterest / monthsInYear) / 100);
+            return amount * Math.Pow(((100 + annualInterest / monthsInYear) / 100), months);
+            //return Enumerable.Range(1, months)
+            //    .Aggregate(amount, (x, y) => x * (100 + annualInterest / monthsInYear) / 100);
 
         }
     }

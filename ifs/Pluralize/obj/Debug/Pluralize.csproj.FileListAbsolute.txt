@@ -1,0 +1,14 @@
+d:\work\edu\cs101\dev\02-ifs\Pluralize\bin\Debug\rubles.txt
+d:\work\edu\cs101\dev\02-ifs\Pluralize\bin\Debug\Pluralize.exe.config
+d:\work\edu\cs101\dev\02-ifs\Pluralize\bin\Debug\Pluralize.exe
+d:\work\edu\cs101\dev\02-ifs\Pluralize\bin\Debug\Pluralize.pdb
+d:\work\edu\cs101\dev\02-ifs\Pluralize\obj\Debug\Pluralize.csprojResolveAssemblyReference.cache
+d:\work\edu\cs101\dev\02-ifs\Pluralize\obj\Debug\Pluralize.exe
+d:\work\edu\cs101\dev\02-ifs\Pluralize\obj\Debug\Pluralize.pdb
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\bin\Debug\Pluralize.exe.config
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\obj\Debug\Pluralize.exe
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\obj\Debug\Pluralize.pdb
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\bin\Debug\rubles.txt
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\bin\Debug\Pluralize.exe
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\bin\Debug\Pluralize.pdb
+C:\Users\Meow\Desktop\git\homeworks\ifs\Pluralize\obj\Debug\Pluralize.csprojResolveAssemblyReference.cache
