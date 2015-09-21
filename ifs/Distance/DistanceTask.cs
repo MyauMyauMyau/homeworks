@@ -6,8 +6,8 @@ namespace Distance
 {
     public class Point
     {
-        public double X { get; private set; }
-        public double Y { get; private set; }
+        public double X { get;}
+        public double Y { get;}
         public Point(double x, double y)
         {
             X = x;
@@ -17,15 +17,22 @@ namespace Distance
         {
             return (Math.Sqrt((X - p2.X) * (X - p2.X) + (Y - p2.Y) * (Y - p2.Y)));
         }
-        public bool isOnTheSegment(Point start, Point end)
+        public double GetDistanceTo(Line line)
         {
-            if ((Y > start.Y && Y < end.Y) || (Y < start.Y && Y > end.Y))
-                return true;
-            return false;
+            var intersection = this.LayPerpendicular(line);
+            return (intersection.isOnTheSegment(line)) ? this.GetDistanceTo(intersection) :
+                Math.Min(this.GetDistanceTo(line.StartPoint), this.GetDistanceTo(line.EndPoint));
+        }
+        public bool isOnTheSegment(Line line)
+        {
+            return ((Y > line.StartPoint.Y && Y < line.EndPoint.Y) || (Y < line.StartPoint.Y && Y > line.EndPoint.Y));
         }
 
-        public Point LayPerpendicular(Point p1, Point p2)
+        public Point LayPerpendicular(Line line)
         {
+            var p1 = line.StartPoint;
+            var p2 = line.EndPoint;
+            // a, b, c - coefficients in fundamental equality
             var a1 = p1.Y - p2.Y;
             var b1 = p2.X - p1.X;
             var c1 = -1 * (p1.X * a1 + p1.Y * b1);
@@ -37,37 +44,44 @@ namespace Distance
             return new Point(x, y);
         }
     }
+
+    public class Line
+    {
+        public Point StartPoint { get; }
+        public Point EndPoint { get; }
+        public Line(Point p1, Point p2)
+        {
+            StartPoint = p1;
+            EndPoint = p2;
+        }
+    }
+
     public class DistanceTask
     {
         readonly int edges = 4;
-
         public double GetDistanceToCurve(double x, double y)
         {
             var p = new Point(x, y);
             var arcCenter = new Point(0, -10);
             var arcRadius = 50;
-            var polygonLines = new List<Tuple<Point, Point>>();
-            polygonLines.Add(new Tuple<Point, Point>(new Point(-50, 10), new Point(-50,-10)));
-            polygonLines.Add(new Tuple<Point, Point>(new Point(-50, 10), new Point(0, 60)));
-            polygonLines.Add(new Tuple<Point, Point>(new Point(0,60), new Point(50, 10)));
-            polygonLines.Add(new Tuple<Point, Point>(new Point(50, 10), new Point(50, -10)));
+            var polygonLines = new List<Line>();
+            polygonLines.Add(new Line(new Point(-50, 10), new Point(-50,-10)));
+            polygonLines.Add(new Line(new Point(-50, 10), new Point(0, 60)));
+            polygonLines.Add(new Line(new Point(0,60), new Point(50, 10)));
+            polygonLines.Add(new Line(new Point(50, 10), new Point(50, -10)));
 
             var distances = new List<double>();
-            distances.Add(p.GetDistanceTo(polygonLines[0].Item1));
             for (int i = 0; i < edges; i++)
-                distances.Add(p.GetDistanceTo(polygonLines[i].Item2));
+                distances.Add(p.GetDistanceTo(polygonLines[i]));
 
             if (y <= arcCenter.Y)
                 distances.Add(Math.Abs(p.GetDistanceTo(arcCenter) - arcRadius));
 
-            var intersections = new Point[edges];
-            for (int i = 0; i < edges; i++)
-            {
-                intersections[i] = p.LayPerpendicular(polygonLines[i].Item1, polygonLines[i].Item2);
-                if (intersections[i].isOnTheSegment(polygonLines[i].Item1, polygonLines[i].Item2))
-                    distances.Add(p.GetDistanceTo(intersections[i]));
-            }
             return distances.Min();
         }
     }
+
+
+
+
 }

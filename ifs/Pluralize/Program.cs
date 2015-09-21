@@ -32,13 +32,10 @@ namespace Pluralize
             var nominative = "рубль";
             var genitive = "рубля";
             var plural = "рублей";
-            if ((count % 100 < 10 || count % 100 > 20) && (count % 10 == 1))
-                return nominative;
 
-            if ((count % 100 < 10 || count % 100 > 20) && (count % 10 > 1 && count % 10 < 5))
-                return genitive;
-
-            return plural;
+            if (count / 10 % 10 == 1 || count % 10 > 4 || count % 10 == 0)
+                return plural;
+            return (count % 10 == 1) ? nominative : genitive;
 		}
 	}
 }
